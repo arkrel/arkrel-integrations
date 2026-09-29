@@ -1,0 +1,24 @@
+{
+  "name": "arkrel",
+  "displayName": "Arkrel",
+  "version": "1.0.0",
+  "description": "Turn invoices, receipts and bank statements into verified data from Cursor. Totals and balances are checked, and a mismatch points to the exact row.",
+  "author": { "name": "Arkrel", "email": "support@arkrel.com" },
+  "homepage": "https://arkrel.com",
+  "repository": "https://github.com/arkrel/arkrel-integrations",
+  "license": "MIT",
+  "logo": "https://arkrel.com/icon-512.png",
+  "keywords": ["documents", "invoices", "bank statements", "pdf", "extraction", "accounting", "mcp"],
+  "rules": "rules",
+  "mcpServers": "mcp.json",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "ARKREL_API_KEY": {
+        "type": "string",
+        "description": "Your Arkrel API key. Create one at arkrel.com on the API keys page (free plan: 50 pages a month)."
+      }
+    },
+    "required": ["ARKREL_API_KEY"]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "n8n-nodes-arkrel",
+  "version": "0.1.4",
+  "description": "n8n community node for Arkrel (https://arkrel.com): turn invoices, receipts, bank statements and purchase orders into verified, source-linked data with every total cross-checked.",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "arkrel",
+    "document-extraction",
+    "invoice",
+    "receipt",
+    "bank-statement",
+    "pdf",
+    "ocr"
+  ],
+  "license": "MIT",
+  "homepage": "https://arkrel.com",
+  "author": {
+    "name": "Conecta Media LLC",
+    "email": "support@arkrel.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arkrel/arkrel-integrations.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arkrel/arkrel-integrations/issues",
+    "email": "support@arkrel.com"
+  },
+  "scripts": {
+    "build": "n8n-node build",
+    "build:watch": "tsc --watch",
+    "dev": "n8n-node dev",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "test": "node --test test/*.test.mts"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "strict": true,
+    "credentials": [
+      "dist/credentials/ArkrelApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Arkrel/Arkrel.node.js",
+      "dist/nodes/ArkrelTrigger/ArkrelTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "0.49.1",
+    "eslint": "9.32.0",
+    "prettier": "3.6.2",
+    "typescript": "5.9.2",
+    "n8n-workflow": "^1.60.0",
+    "@types/node": "^20.0.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}

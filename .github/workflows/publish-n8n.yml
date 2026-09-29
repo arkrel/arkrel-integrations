@@ -1,0 +1,24 @@
+# Publishes n8n-nodes-arkrel to npm with provenance (npm Trusted Publishers, OIDC).
+# No stored npm token: npm accepts the publish only from this workflow.
+name: Publish n8n node
+on:
+  push:
+    tags: ['n8n-v*']
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false
+      - run: npm ci --ignore-scripts
+      - run: npm run build
+      - run: npm run lint
+      - run: npm test
+      - run: npm publish

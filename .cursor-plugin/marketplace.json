@@ -1,0 +1,8 @@
+{
+  "name": "arkrel",
+  "owner": { "name": "Arkrel", "email": "support@arkrel.com" },
+  "metadata": { "description": "Arkrel plugins: documents in, verified data out." },
+  "plugins": [
+    { "name": "arkrel", "source": "cursor", "description": "Extract and verify invoices, receipts and bank statements with Arkrel's MCP server." }
+  ]
+}

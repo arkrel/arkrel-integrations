@@ -1,0 +1,11 @@
+---
+description: Use Arkrel to extract and verify data from invoices, receipts and bank statements
+alwaysApply: false
+---
+
+When the user wants data out of a document (invoice, receipt, bank statement, purchase order, delivery note):
+
+- Call the Arkrel `extract_document` tool with the file URL or base64 content and the right `document_type`. Use `bank_statement` for statements so the balance checks run.
+- If the result is not final, call `get_document_result` with the `document_id`.
+- Report the `status`. For anything other than `succeeded`, list the failed checks with their `detail`, which names the exact row and amount.
+- For bookkeeping, bank statements export as QuickBooks CSV, Xero CSV or OFX.

@@ -1,0 +1,10 @@
+{
+	"node": "n8n-nodes-arkrel.arkrel",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Data & Storage", "Finance & Accounting", "Productivity"],
+	"resources": {
+		"credentialDocumentation": [{ "url": "https://arkrel.com/docs/api-reference" }],
+		"primaryDocumentation": [{ "url": "https://github.com/arkrel/arkrel-integrations#readme" }]
+	}
+}

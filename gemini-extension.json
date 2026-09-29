@@ -1,0 +1,22 @@
+{
+  "name": "arkrel",
+  "version": "1.0.0",
+  "description": "Turn invoices, receipts and bank statements into verified data. Totals and balances are checked, and a mismatch points to the exact row.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "arkrel": {
+      "httpUrl": "https://arkrel.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${ARKREL_API_KEY}"
+      }
+    }
+  },
+  "settings": [
+    {
+      "name": "Arkrel API key",
+      "description": "Create one at arkrel.com on the API keys page (free plan: 50 pages a month).",
+      "envVar": "ARKREL_API_KEY",
+      "sensitive": true
+    }
+  ]
+}

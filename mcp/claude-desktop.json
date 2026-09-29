@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "arkrel": {
+      "type": "http",
+      "url": "https://arkrel.com/mcp",
+      "headers": { "Authorization": "Bearer YOUR_ARKREL_API_KEY" }
+    }
+  }
+}

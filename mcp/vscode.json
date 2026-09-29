@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "arkrel": {
+      "type": "http",
+      "url": "https://arkrel.com/mcp",
+      "headers": { "Authorization": "Bearer ${input:arkrelApiKey}" }
+    }
+  },
+  "inputs": [
+    { "id": "arkrelApiKey", "type": "promptString", "description": "Arkrel API key (arkrel.com, API keys page)", "password": true }
+  ]
+}

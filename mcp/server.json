@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.arkrel/arkrel",
+  "title": "Arkrel",
+  "description": "Turn documents into verified, structured data: fields, tables, and automatic checks.",
+  "websiteUrl": "https://arkrel.com",
+  "repository": {
+    "url": "https://github.com/arkrel/arkrel-integrations",
+    "source": "github",
+    "subfolder": "mcp"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://arkrel.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Your Arkrel API key, sent as \"Bearer <key>\". Create one at arkrel.com on the API keys page.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
